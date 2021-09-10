@@ -1,0 +1,64 @@
+<p>nouvel-article works!</p>
+
+<div class="col mb-3">
+    <div class="col-md-12 mb-3 mt-3">
+        <img src="assets/product.png.png"  width="200px" height="190px">
+    </div>
+    <hr>
+    <div class="col-md-12">
+        <div class="col-md-12 mb-3 mt-3">
+            <h2> <i class="pi pi-info-circle blue-color" style="font-size: 2.5rem"></i>&nbsp; Information de l'article :</h2>
+        </div>
+        <div class="col-md-12">
+          <form [formGroup]="myForm1" (ngSubmit)="onSubmit()">
+            <div class="row mb-3">
+                <div class="col">
+                  <input type="text" formControlName="code" class="form-control" placeholder="Code article*" aria-label="First name">
+                      <div *ngif="control('code')?.errors?.required" class="error">
+                          Name is required
+                      </div> 
+                      <div *ngif="control('prixHt')?.errors?.required" class="error">
+                          Name is required
+                      </div> 
+                      <div *ngif="control('prixTtc')?.errors?.required" class="error">
+                          Name is required
+                      </div> 
+                      <div *ngif="control('tauxTva')?.errors?.required" class="error">
+                          Name is required
+                      </div> 
+                </div>
+                <div class="col mb-3">
+                  <input type="text" formControlName="description" class="form-control" placeholder="Designiation*" aria-label="Last name">
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col">
+                  <input type="text" formControlName="prixHt" class="form-control" placeholder="prix unitaire ht*" aria-label="First name">
+                </div>
+                <div class="col mb-3">
+                  <input type="text" formControlName="tauxTva" class="form-control" placeholder="Taux TVA*" aria-label="Last name">
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col">
+                  <input type="text" formControlName="prixTtc" class="form-control" placeholder="Prix unnitaire TTC*" aria-label="First name">
+                </div>
+                
+                
+              </div>
+          </form>    
+        </div>
+    </div>
+    <div class="col-md-12 text-right">
+        <button class="btn btn-danger mr-3" (click)="cancel()">
+          <i class="pi pi-times"></i>&nbsp; 
+                Annuler
+        </button>
+        <button  class="btn btn-primary" type="submit" (click)=" onSubmit()" [routerLink]="['/articles']" routerLinkActive="router-link-active"  [disabled]="myForm1.invalid">
+          <i class="pi pi-check"></i>&nbsp;
+          Enregistrer
+      </button>
+    </div>
+</div>
+
+

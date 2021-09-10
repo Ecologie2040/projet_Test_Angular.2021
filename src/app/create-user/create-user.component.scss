@@ -1,0 +1,25 @@
+
+
+
+.my-container {
+  margin-top: 25px;
+  max-width: 500px;
+}
+
+
+//plier la bordure 
+.card-header:first-child {
+  border-radius: calc(7.25rem - 1px) calc(.25rem - 1px) 0 0;
+}
+
+
+.example-full-width {
+  width: 100%;
+}
+
+// Changer la couleur
+.card-header {
+  
+  // background-color: rgba(5,8,3,0.03);
+  
+}

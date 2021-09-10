@@ -1,0 +1,41 @@
+<div class="wrap">
+    <h1> Liste des utilisateurs</h1>
+    
+
+    <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <ng-container matColumnDef="id">
+          <mat-header-cell *matHeaderCellDef> id </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+        </ng-container>
+      
+        <ng-container matColumnDef="username">
+          <mat-header-cell *matHeaderCellDef> Pseudo </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.username}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="firstname">
+          <mat-header-cell *matHeaderCellDef> Nom </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.nom }} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="lastname">
+          <mat-header-cell *matHeaderCellDef> Prenom </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.prenom}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="password">
+          <mat-header-cell *matHeaderCellDef> password </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element?.password | hidePassword}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="email">
+          <mat-header-cell *matHeaderCellDef> email </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.email}} </mat-cell>
+        </ng-container>
+      
+       
+      
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+</div>
+
+
+
+

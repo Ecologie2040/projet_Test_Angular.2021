@@ -1,0 +1,77 @@
+<p>page-article works!</p>
+
+<div class="col">
+    <div class="row m-3">
+        <div class="col-md-8 p-0">
+            <h1>Liste des Article</h1>
+        </div>
+       <div class="col-md-4 text-right">
+            <app-boutton-action 
+            (clickEvent)="nouvelArticle()">
+            </app-boutton-action> 
+        </div>
+    </div>
+
+    <div *ngFor="let itemArticle of createArticles " class="col m-3">
+      <app-detail-article [createArticle]="itemArticle"></app-detail-article>
+      
+      
+  </div>
+
+   
+
+
+    <div class="row mb-3">
+        <div class="col-md-12 text-center">
+            <app-pagination></app-pagination>
+        </div>  
+    </div>
+</div>
+
+
+
+
+
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID ;)</th>
+       <th scope="col">Code</th>
+        <th scope="col">Description</th>
+        <th scope="col">PrixHT</th>
+        <th scope="col">TauxTva</th>
+        <th scope="col">prixTtc</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of articles ">
+        <td>{{item.id}}</td>
+        <td>{{item.code}}</td>
+        <td>{{item.description}}</td>
+        <td>{{item.prixHt | pointVergule}}</td>
+        <td>{{item.tauxTva | pointVergule}}</td>
+        <td>{{item.prixTtc | pointVergule}}</td>
+        
+      </tr>
+    </tbody>
+  </table> 
+
+  <tbody>
+    <tr *ngFor="let item of articles | keyvalue">
+      
+      <p>{{item.key}} </p>
+    </tr>
+  </tbody>
+
+  <tbody>
+    <tr *ngFor="let item of articles | keyvalue">
+      
+      
+        <td>{{item | json}} </td>
+    </tr>
+  </tbody>
+
+  
+
+

@@ -1,0 +1,26 @@
+<div class="container my-container">
+  <div class="card justify-content-md-center">
+      <div class="card-header text-center">
+         <h3><b> Je me connecte</b></h3>
+         
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" >
+      <mat-form-field   class="example-full-width" appearance="outline">
+          Pseudo
+          <input matInput  type="text" formControlName='username'>
+        </mat-form-field>
+        <mat-form-field  class="example-full-width" appearance="outline">
+          Mot de passe
+          <input matInput type="password" formControlName='password'>
+        </mat-form-field>
+        
+        <button type="submit" ><i class="pi pi-check"></i>
+          Se connecter
+        </button>
+        <button [routerLink]="['/create-user']" routerLinkActive="router-link-active" type="button" class="btn btn-link">S'inscrire</button>
+        
+  </form>
+
+ 
+</div>
+</div>
+</div>

@@ -1,0 +1,38 @@
+<div class="container my-container">
+  <div class="card justify-content-md-center">
+      <div class="card-header text-center">
+         <h3><b>Crée un compte</b></h3>
+<form [formGroup]="creationF"  (ngSubmit)="onSubmit()" >
+    <mat-form-field  class="example-full-width"  appearance="outline">
+        Pseudo
+        <input matInput  type="text" formControlName='username'>
+      </mat-form-field>
+      <mat-form-field  class="example-full-width"  appearance="outline">
+        Password
+        <input matInput type="password" formControlName='password'>
+      </mat-form-field>
+      <mat-form-field  class="example-full-width"  appearance="outline">
+        email
+        <input matInput type="email" formControlName='email'>
+      </mat-form-field>
+      <mat-form-field  class="example-full-width"  appearance="outline">
+        Prénom
+        <input matInput type="text" formControlName='prenom'>
+      </mat-form-field>
+      <mat-form-field  class="example-full-width"  appearance="outline">
+        Nom
+        <input matInput type="text" formControlName='nom'>
+      </mat-form-field>
+
+      <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-primary" [routerLink]="['/']" routerLinkActive="router-link-active" >Annuler</button>
+      <button type="submit" class="btn btn-success" >Créer</button>
+      </div>
+      
+        
+      
+</form>
+
+</div>
+</div>
+</div>

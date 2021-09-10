@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+//page-DASHBOARD
+body {
+
+    background-color: #7f88a4!important;
+}
+
+.background-grey {
+    background-color: #dedfe0 !important;
+}
+
+.border-none {
+    border: none !important;
+}
+
+.min-height-80 {
+    min-height: 80px;
+}
+
+.border-righ {
+    border-right: 2px solid #dedfe0 !important;
+}
+
+.custom-border {
+    border: solid #9ca1a6;
+    border-radius: 5px;
+}
+
+.bleu-color {
+    color: #ea2f40
+}
